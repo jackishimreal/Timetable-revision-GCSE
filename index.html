@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GCSE Revision Planner — Matin</title>
+  <title>GCSE Revision Planner RISHAB</title>
   <meta name="description" content="Aesthetic, intuitive GCSE revision planner with timers, notes, progress, and a full weekly timetable." />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -224,9 +224,9 @@
     .chip.chemistry{background:var(--chemistry);}
     .chip.biology{background:var(--biology);}
     .chip.geography{background:var(--geography);}
-    .chip.dit{background:var(--dit);}
-    .chip.health-social{background:var(--health-social);}
-    .chip.enterprise{background:var(--enterprise);}
+    .chip.dit{background:var(--homowork);}
+    .chip.health-social{background:var(--computimg);}
+    .chip.enterprise{background:var(--business);}
     .chip.break{background:var(--break);}
     
     .subject {
@@ -376,7 +376,7 @@
     <header>
       <div>
         <h1 class="title">GCSE Revision Planner</h1>
-        <div class="subtitle">45-minute blocks, 5-minute breaks. Days: Monday, Tuesday, Thursday, Friday, Saturday. 5:00–7:30 PM.</div>
+        <div class="subtitle">45-minute blocks, 5-minute breaks. Days: Monday, Tuesday, Wednesday , Thursday, Friday. 4:30–7:00 PM.</div>
       </div>
       <div class="actions">
         <button class="btn-primary" onclick="window.print()">Print / Save PDF</button>
@@ -433,9 +433,9 @@
               <th>Time</th>
               <th>Monday</th>
               <th>Tuesday</th>
+              <th>Wednesday</th>
               <th>Thursday</th>
               <th>Friday</th>
-              <th>Saturday</th>
             </tr>
           </thead>
           <tbody id="week-body"></tbody>
@@ -450,7 +450,7 @@
 
   <script>
     // --- DATA ---
-    const DAYS = ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"];
+    const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday",];
 
     const SCHEDULE = {
       "Monday": [
@@ -467,21 +467,14 @@
         { time: "6:35 – 6:40", subject: "Break", color: "break", tag: "5 mins" },
         { time: "6:40 – 7:25", subject: "Geography", color: "geography", tag: "Urban Issues" }
       ],
-      "Thursday": [
+        "Wednesday": [
         { time: "5:00 – 5:45", subject: "English Literature", color: "english-literature", tag: "Poetry Analysis" },
         { time: "5:45 – 5:50", subject: "Break", color: "break", tag: "5 mins" },
         { time: "5:50 – 6:35", subject: "DIT", color: "dit", tag: "Spreadsheet Skills" },
         { time: "6:35 – 6:40", subject: "Break", color: "break", tag: "5 mins" },
         { time: "6:40 – 7:25", subject: "Maths", color: "maths", tag: "Past Paper Qs" }
       ],
-      "Friday": [
-        { time: "5:00 – 5:45", subject: "Health & Social Care", color: "health-social", tag: "Care Values" },
-        { time: "5:45 – 5:50", subject: "Break", color: "break", tag: "5 mins" },
-        { time: "5:50 – 6:35", subject: "Enterprise", color: "enterprise", tag: "Financial Planning" },
-        { time: "6:35 – 6:40", subject: "Break", color: "break", tag: "5 mins" },
-        { time: "6:40 – 7:25", subject: "Physics", color: "physics", tag: "Electricity" }
-      ],
-      "Saturday": [
+           "Thursday": [
         { time: "5:00 – 5:45", subject: "Chemistry", color: "chemistry", tag: "Organic Chemistry" },
         { time: "5:45 – 5:50", subject: "Break", color: "break", tag: "5 mins" },
         { time: "5:50 – 6:35", subject: "Biology", color: "biology", tag: "Genetics" },
@@ -489,6 +482,13 @@
         { time: "6:40 – 7:25", subject: "English Language", color: "english-language", tag: "Reading Comprehension" }
       ]
     };
+      "Friday": [
+        { time: "5:00 – 5:45", subject: "Health & Social Care", color: "health-social", tag: "Care Values" },
+        { time: "5:45 – 5:50", subject: "Break", color: "break", tag: "5 mins" },
+        { time: "5:50 – 6:35", subject: "Enterprise", color: "enterprise", tag: "Financial Planning" },
+        { time: "6:35 – 6:40", subject: "Break", color: "break", tag: "5 mins" },
+        { time: "6:40 – 7:25", subject: "Physics", color: "physics", tag: "Electricity" }
+      ],
 
     const TIPS = [
       { t:"Active recall > passive reading", d:"Close the book and write from memory. Teach the topic out loud." },
